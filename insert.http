@@ -1,0 +1,79 @@
+//add score
+POST http://localhost:8080/api/score
+Content-Type: application/json
+
+{
+  "game": "pexeso",
+  "player": "alfonz",
+  "points": 100,
+  "playedOn": "2023-04-05T20:05:11"
+}
+
+###
+//get score
+GET http://localhost:8080/api/score/pexeso
+Content-Type: application/json
+
+###
+//get comment
+
+POST http://localhost:8080/api/comment
+Content-Type: application/json
+
+{
+  "game": "pexeso",
+  "player": "alfonz",
+  "comment": "dobra hra",
+  "commentedOn": "2023-04-05T20:05:11"
+}
+
+###
+//get comment
+GET http://localhost:8080/api/comment/pexeso
+Content-Type: application/json
+
+###
+//add new rating
+POST http://localhost:8080/api/rating
+Content-Type: application/json
+
+{
+  "game": "pexeso",
+  "player": "alfonz",
+  "rating": 5,
+  "ratedOn": "2023-04-05T20:05:11"
+}
+
+###
+//add new rating
+POST http://localhost:8080/api/rating
+Content-Type: application/json
+
+{
+"game": "pexeso",
+"player": "Matej",
+"rating": 3,
+"ratedOn": "2023-04-05T20:05:11"
+}
+
+###
+//update rating
+POST http://localhost:8080/api/rating
+Content-Type: application/json
+
+{
+  "game": "pexeso",
+  "player": "alfonz",
+  "rating": 2,
+  "ratedOn": "2023-04-05T20:05:11"
+}
+
+###
+//average rating
+GET http://localhost:8080/api/rating/avg/pexeso
+Content-Type: application/json
+
+###
+//Rating of player alfonz
+GET http://localhost:8080/api/rating/pexeso/alfonz
+Content-Type: application/json
